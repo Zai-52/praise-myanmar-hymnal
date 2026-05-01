@@ -11,5 +11,5 @@ npm-debug.*
 web-build/
 .DS_Store
 .last_json_hash
-.SPEC.md
+SPEC.md
 android/app/build

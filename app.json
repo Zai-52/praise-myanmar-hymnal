@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Praise Myanmar Hymnal",
+    "slug": "praise-myanmar-hymnal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#f6f4ef"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.praise.hymnal"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#f6f4ef"
+      },
+      "package": "com.praise.hymnal"
+    }
+  }
+}

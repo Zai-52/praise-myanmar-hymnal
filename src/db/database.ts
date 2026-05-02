@@ -2,7 +2,7 @@ import * as SQLite from "expo-sqlite";
 import type { HymnJson, HymnReferenceValue, SongReferenceRow } from "../types/hymn";
 import { myanmarDigitsToAscii, normalizeMyTitle, songNumberToSortInt } from "../utils/digits";
 
-export const BUNDLED_DATA_VERSION = 7;
+export const BUNDLED_DATA_VERSION = 8;
 
 let dbPromise: Promise<SQLite.SQLiteDatabase> | null = null;
 

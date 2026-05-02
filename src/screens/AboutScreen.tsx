@@ -5,8 +5,8 @@ import type { ThemeColors } from "../theme/colors";
 import { useTheme } from "../theme/ThemeContext";
 import { MYANMAR_FONT_MEDIUM, MYANMAR_FONT_REGULAR, myanmarTextProps } from "../theme/typography";
 
-const GITHUB_URL = "https://github.com";
-const FEEDBACK_EMAIL = "zawyehtet7928@gmail.com";
+const GITHUB_URL = "https://github.com/Zai-52/praise-myanmar-hymnal";
+const FEEDBACK_EMAILS = ["zawyehtet7928@gmail.com", "yyar70386@gmail.com"];
 
 export function AboutScreen() {
   const { colors } = useTheme();
@@ -16,8 +16,8 @@ export function AboutScreen() {
     await Linking.openURL(GITHUB_URL);
   }, []);
 
-  const openMail = useCallback(async () => {
-    await Linking.openURL(`mailto:${FEEDBACK_EMAIL}`);
+  const openMail = useCallback(async (email: string) => {
+    await Linking.openURL(`mailto:${email}`);
   }, []);
 
   return (
@@ -62,17 +62,20 @@ export function AboutScreen() {
           style={({ pressed }) => [styles.linkRow, pressed && styles.pressed]}
         >
           <Ionicons name="logo-github" size={20} color={colors.accent} />
-          <Text style={styles.linkText}>GitHub: [I will tell you later]</Text>
+          <Text style={styles.linkText}>GitHub: [https://github.com/Zai-52/praise-myanmar-hymnal]</Text>
         </Pressable>
-        <Pressable
-          onPress={() => void openMail()}
-          accessibilityRole="button"
-          accessibilityLabel={`Email ${FEEDBACK_EMAIL}`}
-          style={({ pressed }) => [styles.linkRow, pressed && styles.pressed]}
-        >
-          <Ionicons name="mail-outline" size={20} color={colors.accent} />
-          <Text style={styles.linkText}>{FEEDBACK_EMAIL}</Text>
-        </Pressable>
+        {FEEDBACK_EMAILS.map((email) => (
+          <Pressable
+            key={email}
+            onPress={() => void openMail(email)}
+            accessibilityRole="button"
+            accessibilityLabel={`Email ${email}`}
+            style={({ pressed }) => [styles.linkRow, pressed && styles.pressed]}
+          >
+            <Ionicons name="mail-outline" size={20} color={colors.accent} />
+            <Text style={styles.linkText}>{email}</Text>
+          </Pressable>
+        ))}
       </View>
     </ScrollView>
   );

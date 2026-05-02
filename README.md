@@ -10,7 +10,7 @@ This app helps brothers and sisters quickly find hymns and sing from a digital h
 
 - **Copyright**: The developers do not own the lyrics.This project is for ministry and educational purposes only.
 - **Source**: "မြန်မာနိုင်ငံ ညီအစ်ကို အသင်းတော်များ မိတ်သဟာ အဖွဲ့ချုပ် - ချီးမွမ်းဓမ္မသီချင်း (၂၀၀) ပုဒ်" book
-- **Development Team**: Zaw Ye Htet and Yar Yar
+- **Developers**: Zaw Ye Htet and Yar Yar
 - **Data Digitalization**: Aung Myo Oo
 - **App Version**: 1.0.0
 
